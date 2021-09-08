@@ -8,7 +8,7 @@ video: https://ucarecdn.com/73463472-f14d-4ad9-a3c8-61eac43ab954/
 media:
   - https://ucarecdn.com/5bf445e2-a370-41f5-b2f8-e244b15ffecd/
   - https://ucarecdn.com/b3833814-e99f-40e4-8b11-a3a83e5c224b/
-downloadfile: https://ucarecdn.com/b3c06ad4-c628-47b4-887a-7d601bee789c/
+downloadfile: https://ucarecdn.com/1649857f-d1fa-4f69-aaf4-ce74af9a9705/
 mainpitch:
   title: Why Kaldi
   description: >
