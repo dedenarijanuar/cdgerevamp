@@ -1,11 +1,14 @@
 ---
+templateKey: index-page
+title: CMS Demo Example
+image: /img/6.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
-downloadfile: https://ucarecdn.com/893d88bb-7ebe-4f00-80e2-091c99626c91/
+video: https://ucarecdn.com/73463472-f14d-4ad9-a3c8-61eac43ab954/
 media:
   - https://ucarecdn.com/5bf445e2-a370-41f5-b2f8-e244b15ffecd/
   - https://ucarecdn.com/b3833814-e99f-40e4-8b11-a3a83e5c224b/
-templateKey: index-page
+downloadfile: /files/simple_test.pdf
 mainpitch:
   title: Why Kaldi
   description: >
@@ -48,9 +51,6 @@ intro:
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
-title: CMS Demo Example
-image: /img/6.jpg
-video: https://ucarecdn.com/73463472-f14d-4ad9-a3c8-61eac43ab954/
 gallery:
   - alt: yellow rope image
     image: https://ucarecdn.com/277cdf82-24aa-4d80-8169-bb46f4cd319d/
