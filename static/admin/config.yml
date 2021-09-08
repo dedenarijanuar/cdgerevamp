@@ -8,7 +8,7 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
-# local_backend: true
+local_backend: true
 publish_mode: editorial_workflow
 
 media_folder: static/img
@@ -55,17 +55,17 @@ collections:
           # - {label: Menu, name: menuImage, widget: object, fields: [{label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]},{label: Image4, name: image4, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]},{label: Image5, name: image5, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]},{label: Image6, name: image6, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
           # - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]},{label: Image4, name: image4, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
           - { name: video, label: video, widget: file }
-          - label: "Gallery"
-            name: "media"
-            widget: "image"
-            allow_multiple: true
-            choose_url: false
-            media_library:
-              config:
-                multiple: true
-          # - {label: 'Gallery', name: 'gallery', widget: 'list', fields: [{ name: image, label: Image, widget: image, multiple: true }, { name: title, label: Title, widget: string, required: false }]}
+          # - label: "Gallery"
+          #   name: "media"
+          #   widget: "image"
+          #   allow_multiple: true
+          #   choose_url: false
+          #   media_library:
+          #     config:
+          #       multiple: true
+          - {label: 'Gallery', name: 'gallery', widget: 'list', fields: [{ name: image, label: Image, widget: image, multiple: true }, { name: title, label: Title, widget: string, required: false }]}
           - {label: Description, name: description, widget: string}
-          - {label: FileUpload, name: downloadfile, widget: file}
+          - {label: FileUpload, name: downloadfile, widget: file, media_library: [{ media_folder: "/static/files"}]}
       - file: "src/pages/about/index.md"
         label: "OUR COMPANY"
         name: "about"
