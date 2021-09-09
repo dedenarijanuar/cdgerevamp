@@ -8,7 +8,7 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
-local_backend: true
+local_backend: false
 publish_mode: editorial_workflow
 
 media_folder: static/img
@@ -64,7 +64,7 @@ collections:
           #     config:
           #       multiple: true
           - {label: 'Gallery', name: 'gallery', widget: 'list', fields: [{ name: image, label: Image, widget: image, multiple: true }, { name: title, label: Title, widget: string, required: false }]}
-          - {label: Description, name: description, widget: string}
+          - {label: Description, name: description, widget: markdown}
           - {label: FileUpload, name: downloadfile, widget: file, media_library: [{ media_folder: "/static/files"}]}
       - file: "src/pages/about/index.md"
         label: "OUR COMPANY"
@@ -73,7 +73,7 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
-          - {label: Description, name: description, widget: text}
+          - {label: Description, name: description, widget: markdown}
           - {label: Heading, name: heading, widget: string}
           - {label: Subheading, name: subheading, widget: string}
           - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
@@ -84,14 +84,14 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "people-page"}
           - {label: Title, name: title, widget: string}
-          - {label: Subheading, name: subheading, widget: string}
-          - {label: Subheading2, name: subheading2, widget: string}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Link, name: text, widget: text}]}]}
+          - {label: Description, name: subheading, widget: markdown}
+          # - {label: Subheading2, name: subheading2, widget: string}
+          # - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
+          - {label: Intro, name: intro, widget: object, fields: [{label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Link, name: text, widget: text}]}]}
       - file: "src/pages/joinus/index.md"
         label: "JOIN US"
         name: "joinus"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "joinus-page"}
           - {label: Title, name: title, widget: string}
-          - {label: Subheading, name: subheading, widget: string}
+          - {label: Subheading, name: subheading, widget: markdown}

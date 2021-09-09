@@ -22,28 +22,15 @@ export const PeoplePageTemplate = ({
         <h1>{title}</h1>
           <Container>
               <Row>
-                  <Col md={6} sm={6} xs={6}>
-                    <image scr={image1} alt={altImage1}/>
-                  </Col>
-                  <Col md={6} sm={6} xs={6}>
+                  <Col md={12} sm={12} xs={12}>
                     <p>{subheading}</p>
                   </Col>
               </Row>
-              <Row>
-                  <Col md={6} sm={6} xs={6}>
-                    <image scr={image2} alt={altImage2}/>
-                  </Col>
-                  <Col md={6} sm={6} xs={6}>
-                    <p>{subheading2}</p>
-                  </Col>
-              </Row>
           </Container>
+          <div className="column is-12">
+            <Features gridItems={intro.blurbs}/>
+          </div>
         </div>
-        <div className="column is-12">
-          <Features gridItems={intro.blurbs}/>
-        </div>
-          
-
       </div>
   )
 
