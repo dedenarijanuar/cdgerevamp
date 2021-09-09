@@ -4,7 +4,7 @@ title: Test Product 1
 date: 2021-09-03T09:06:18.823Z
 description: hfdkjshfdskj
 featuredpost: true
-featuredimage: /images/4.jpg
+featuredimage: /images/bg1.jpg
 ---
 hshdkshkshfkl
 

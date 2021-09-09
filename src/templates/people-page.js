@@ -122,7 +122,7 @@ export const PeoplePageTemplate = ({
           blurbs {
             image {
               childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
+                fluid(maxWidth: 600, quality: 80) {
                   ...GatsbyImageSharpFluid
                 }
               }

@@ -24,12 +24,12 @@ main:
     image: /img/3.jpg
 intro:
   blurbs:
-    - image: /img/3.jpg
+    - image: /img/bg1.jpg
       text: |
         https://cms-demo-example.netlify.app/product/test-product-1/
-    - image: /img/5.jpg
+    - image: /img/bg2.jpg
       text: https://cms-demo-example.netlify.app/product/testing-product/
-    - image: https://ucarecdn.com/8710a001-58f8-4d7d-a7df-b3b9901ed6a8/
+    - image: /img/bg3.jpg
       text: https://cms-demo-example.netlify.app/product/test/
   heading: Test Carousel
   description: This Carousel
