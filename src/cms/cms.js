@@ -6,7 +6,9 @@ import PeoplePagePreview from "./preview-templates/PeoplePagePreview";
 import JoinusPagePreview from "./preview-templates/JoinusPagePreview";
 import ProductPostPreview from "./preview-templates/ProductPostPreview";
 import uploadcare from 'netlify-cms-media-library-uploadcare'
+import { CustomWidgetControl, CustomWidgetPreview } from '../components/customWidget';
 
+CMS.registerWidget('mywidget', CustomWidgetControl, CustomWidgetPreview);
 CMS.registerMediaLibrary(uploadcare);
 CMS.registerPreviewTemplate("index", IndexPagePreview);
 CMS.registerPreviewTemplate("about", AboutPagePreview);
