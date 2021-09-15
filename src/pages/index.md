@@ -1,14 +1,11 @@
 ---
-templateKey: index-page
-title: CMS Demo Example
-image: /img/6.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
-video: https://ucarecdn.com/73463472-f14d-4ad9-a3c8-61eac43ab954/
+downloadfile: /files/simple_test.pdf
 media:
   - https://ucarecdn.com/5bf445e2-a370-41f5-b2f8-e244b15ffecd/
   - https://ucarecdn.com/b3833814-e99f-40e4-8b11-a3a83e5c224b/
-downloadfile: /files/simple_test.pdf
+templateKey: index-page
 mainpitch:
   title: Why Kaldi
   description: >
@@ -51,6 +48,30 @@ intro:
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
+title: CMS Demo Example
+description: >
+  <h1>Lorem Ipsum</h1>
+
+
+  <h4>&quot;Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...&quot;</h4>
+
+
+  <h5>&quot;There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...&quot;</h5>
+
+
+  <hr />
+
+  <h2>What is Lorem Ipsum?</h2>
+
+
+  <p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+
+  <h2>Why do we use it?</h2>
+
+
+  <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+video: https://ucarecdn.com/73463472-f14d-4ad9-a3c8-61eac43ab954/
 gallery:
   - alt: yellow rope image
     image: https://ucarecdn.com/277cdf82-24aa-4d80-8169-bb46f4cd319d/
@@ -77,8 +98,5 @@ main:
   image3:
     alt: Coffee beans
     image: /img/Our_Company.jpg
-description: Kaldi is the ultimate spot for coffee lovers who want to learn
-  about their java’s origin and support the farmers that grew it. We take coffee
-  production, roasting and brewing seriously and we’re glad to pass that
-  knowledge to anyone.
+image: /img/6.jpg
 ---
