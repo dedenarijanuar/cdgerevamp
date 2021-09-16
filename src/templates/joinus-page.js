@@ -13,9 +13,10 @@ export const JoinPageTemplate = ({
           <h1>{title}</h1>
           <p>{description}</p>
           <Player
-          autoplay
+          hover={true}
+          autoplay={false}
           loop
-          src="https://assets3.lottiefiles.com/packages/lf20_UJNc2t.json"
+          src="https://assets10.lottiefiles.com/packages/lf20_tthccsda.json"
           style={{ height: '300px', width: '300px' }}
         >
           <Controls visible={false} />

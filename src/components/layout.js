@@ -42,7 +42,8 @@ const Layout = ({ children }) => {
           <div className="menubar">
           <div style={{ width: '50px'}}>
             <Player
-              autoplay
+              hover={true}
+              autoplay={false}
               loop
               src="https://assets9.lottiefiles.com/packages/lf20_iF9sFw.json"
               style={{ height: '80px', width: '80px' }}
@@ -57,9 +58,10 @@ const Layout = ({ children }) => {
           <div className="menubar">
           <div style={{ width: '50px'}}>
             <Player
-              autoplay
+              hover={true}
+              autoplay={false}
               loop
-              src="https://assets3.lottiefiles.com/packages/lf20_UJNc2t.json"
+              src="https://assets2.lottiefiles.com/private_files/lf30_p9cis9ii.json"
               style={{ height: '80px', width: '80px' }}
             >
               <Controls visible={false} />
@@ -72,30 +74,32 @@ const Layout = ({ children }) => {
           <div className="menubar">
           <div style={{ width: '50px'}}>
             <Player
-              autoplay
+              hover={true}
+              autoplay={false}
               loop
-              src="https://assets3.lottiefiles.com/packages/lf20_UJNc2t.json"
-              style={{ height: '80px', width: '80px' }}
+              src="https://assets4.lottiefiles.com/private_files/lf30_ncf9a4hg.json"
+              style={{ height: '50px', width: '50px' }}
             >
               <Controls visible={false} />
             </Player>
           </div>
-            OUR PEOPLE
+            <span style={{ 'margin-left': '-20px'}}>OUR PEOPLE</span>
           </div>
         </Link>
         <Link to="/joinus" style={{ textDecoration: 'none' }}>
           <div className="menubar">
           <div style={{ width: '50px'}}>
             <Player
-              autoplay
+              hover={true}
+              autoplay={false}
               loop
-              src="https://assets3.lottiefiles.com/packages/lf20_UJNc2t.json"
-              style={{ height: '80px', width: '80px' }}
+              src="https://assets10.lottiefiles.com/packages/lf20_tthccsda.json"
+              style={{ height: '50px', width: '50px' }}
             >
               <Controls visible={false} />
             </Player>
           </div>
-            JOIN US
+            <span style={{'margin-left': '-50px'}}>JOIN US</span>
           </div>
         </Link>
         
