@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -35,12 +36,69 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
-        <nav>
+        <nav style={{ display: 'flex'}}>
         <Link to="/" style={{ textDecoration: 'none', paddingLeft: 13 }}><img src={"/img/gatsby-icon.png"} alt={"altImage1"} style={{width: "50px"}}></img></Link>
-        <Link to="/about" style={{ textDecoration: 'none', paddingLeft: 13 }}>OUR COMPANY</Link>
-        <Link to="/product" style={{ textDecoration: 'none', paddingLeft: 13 }}>OUR BUSINESSES</Link>
-        <Link to="/people" style={{ textDecoration: 'none', paddingLeft: 13 }}>OUR PEOPLE</Link>
-        <Link to="/joinus" style={{ textDecoration: 'none', paddingLeft: 13 }}>JOIN US</Link>
+        <Link to="/about" style={{ textDecoration: 'none' }}>
+          <div className="menubar">
+          <div style={{ width: '50px'}}>
+            <Player
+              autoplay
+              loop
+              src="https://assets9.lottiefiles.com/packages/lf20_iF9sFw.json"
+              style={{ height: '80px', width: '80px' }}
+            >
+              <Controls visible={false} />
+            </Player>
+          </div>
+            OUR COMPANY
+          </div>
+        </Link>
+        <Link to="/product" style={{ textDecoration: 'none' }}>
+          <div className="menubar">
+          <div style={{ width: '50px'}}>
+            <Player
+              autoplay
+              loop
+              src="https://assets3.lottiefiles.com/packages/lf20_UJNc2t.json"
+              style={{ height: '80px', width: '80px' }}
+            >
+              <Controls visible={false} />
+            </Player>
+          </div>
+            OUR BUSINESSES
+          </div>
+        </Link>
+        <Link to="/people" style={{ textDecoration: 'none' }}>
+          <div className="menubar">
+          <div style={{ width: '50px'}}>
+            <Player
+              autoplay
+              loop
+              src="https://assets3.lottiefiles.com/packages/lf20_UJNc2t.json"
+              style={{ height: '80px', width: '80px' }}
+            >
+              <Controls visible={false} />
+            </Player>
+          </div>
+            OUR PEOPLE
+          </div>
+        </Link>
+        <Link to="/joinus" style={{ textDecoration: 'none' }}>
+          <div className="menubar">
+          <div style={{ width: '50px'}}>
+            <Player
+              autoplay
+              loop
+              src="https://assets3.lottiefiles.com/packages/lf20_UJNc2t.json"
+              style={{ height: '80px', width: '80px' }}
+            >
+              <Controls visible={false} />
+            </Player>
+          </div>
+            JOIN US
+          </div>
+        </Link>
+        
         </nav>
         <main>{children}</main>
         { /*<footer>

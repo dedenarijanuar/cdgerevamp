@@ -18,7 +18,7 @@ export const JoinPageTemplate = ({
           src="https://assets3.lottiefiles.com/packages/lf20_UJNc2t.json"
           style={{ height: '300px', width: '300px' }}
         >
-          <Controls visible={true} buttons={['play', 'repeat', 'frame', 'debug']} />
+          <Controls visible={false} />
         </Player>
       </div>
   )

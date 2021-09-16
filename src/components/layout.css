@@ -735,3 +735,7 @@ nav {
   line-height: 1;
   margin: 0.5em 0;
 }
+
+.menubar {
+  height: 50px; width: 200px; display: flex;flex-wrap: nowrap;align-content: center;justify-content: space-around;align-items: center;
+}
