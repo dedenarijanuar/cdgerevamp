@@ -6,6 +6,7 @@ import { graphql } from 'gatsby'
 import Gallery from '../components/Gallery'
 // import Video from '../components/Video'
 import { ReactVideo } from "reactjs-media";
+import { useMixpanel } from 'gatsby-plugin-mixpanel'
 
 export const IndexPageTemplate = ({
   image,
@@ -18,6 +19,7 @@ export const IndexPageTemplate = ({
   video,
   gallery,
   downloadfile,
+  tracking
 }) => (
   <div>
     <div
@@ -70,13 +72,19 @@ export const IndexPageTemplate = ({
             <div className="column is-10 is-offset-1">
               <div className="content">
                 <div className="content">
-                  <div dangerouslySetInnerHTML={{__html: description}} />
+                  <div className="tile">
+                    <h1 className="title">{mainpitch.title}</h1>
+                  </div>
+                  <div className="tile">
+                    <h3 className="subtitle">{mainpitch.description}</h3>
+                  </div>
                 </div>
                 <div className="columns">
                   <div className="column is-12">
                     <h3 className="has-text-weight-semibold is-size-2">
                       {heading}
                     </h3>
+                    <p>{description}</p>
                   </div>
                 </div>
               </div>
@@ -92,6 +100,7 @@ export const IndexPageTemplate = ({
           poster="/img/black.jpg"
           primaryColor="red"
           // other props
+          onPlay={() => tracking.track('Start Video') }
       />
     </section>
 
@@ -105,7 +114,7 @@ export const IndexPageTemplate = ({
     <section>
       <div className="content">
         <div className="tile">
-        <a href={downloadfile} download>Download file</a>
+        <a href={downloadfile} download onClick={() => tracking.track('Download') }>Download file</a>
         </div>
       </div>
     </section>
@@ -125,10 +134,12 @@ IndexPageTemplate.propTypes = {
   video: PropTypes.string,
   gallery: PropTypes.array,
   downloadfile: PropTypes.string,
+  tracking: PropTypes.func
 }
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
+  const mixpanel = useMixpanel()
 
   return (
     <Layout>
@@ -143,6 +154,7 @@ const IndexPage = ({ data }) => {
         video={frontmatter.video}
         gallery={frontmatter.gallery}
         downloadfile={frontmatter.downloadfile}
+        tracking={mixpanel}
       />
     </Layout>
   )
