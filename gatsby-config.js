@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`
+})
+
 module.exports = {
   siteMetadata: {
     title: `CMS Demo Example`,
@@ -5,6 +9,31 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          process.env.GA_MEASUREMENT_ID, // Google Analytics / GA
+        ],
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true
+        },
+      },
+    },
+    {
+    resolve: 'gatsby-plugin-mixpanel',
+    options: {
+      apiToken: process.env.MIXPANEL_API_TOKEN, // required
+      // optional fields, default values
+      enableOnDevMode: false, // if false mixpanel will be activated on NODE_ENV=production only
+      mixpanelConfig: null, // override specific config for mixpanel initialization https://github.com/mixpanel/mixpanel-js/blob/8b2e1f7b/src/mixpanel-core.js#L87-L110
+      pageViews: 'all', // see below
+       // set pageViews to 'all' and use this option to set the same event name for all page view events
+    },
+  },
     'gatsby-plugin-react-helmet',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support

@@ -10,6 +10,7 @@ export class CustomWidgetControl extends PureComponent {
   }
 
   onChange = (event, editor) => {
+    console.log(event)
     const data = event.editor.getData();
     this.props.onChange(data);
   }
