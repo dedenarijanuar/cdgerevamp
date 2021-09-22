@@ -5,6 +5,10 @@ import { CKEditor } from 'ckeditor4-react';
 // a functional component. It will not work for some reason.
 export class CustomWidgetControl extends PureComponent {
 
+  getValue() {
+    return this.props.value ? this.props.value : "";
+  }
+
   onChange = (event, editor) => {
     const data = event.editor.getData();
     this.props.onChange(data);
@@ -13,7 +17,7 @@ export class CustomWidgetControl extends PureComponent {
   render() {
     return (
       <CKEditor 
-        // initData={<p>This is an example CKEditor </p>}
+        initData={this.getValue()}
         onChange={this.onChange}
         editorUrl="https://cdn.ckeditor.com/4.16.0/full-all/ckeditor.js"
         config={ {
